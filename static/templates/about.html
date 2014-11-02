@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+{% block header %}
+<body id="about">
+	<div class="page">
+		<div id="bsd">
+		</div>
+			{% load staticfiles %}
+			<h1> <a href="{% url "home" %}"><img src="{% static "img/logo.png" %}"> </a> </h1>
+	        <nav>
+			</ul>
+	                 <li><a href="{% url "home" %}">home</a></li>
+	                 <li class="active"><a href="{% url "about" %}">about</a></li>
+	                 <li><a href="{% url "art" %}">art</a></li>
+	                 <li><a href="contact.html">contact</a></li>
+	            </ul>
+	        </nav>
+{% endblock %}
+{% block content %}
+	        <div id="content">
+		        <div class="col">
+				{% load staticfiles %}
+				<img src="{% static "img/bailarommheadshot.jpg" %}" width="400px"/>
+			    </div>
+			    <div class="col">
+			    	{% for description in descriptions %}
+					{% if description.title == "about" and description.active %}
+						{{description.text | linebreaks}}
+			    		{% endif %}
+				{% endfor %}
+				<li><img src="{% static "img/logo.png" %}" width="150px"> </li>
+				<li> Aka Bonnie Saltzman </li>
+				<ul class="footnote">
+				<li><sup>1</sup> The Abishter; Hashem; Elokim; G-D </li>
+				</ul>
+				<li class="copyright">Copyright © 2014 Baila Romm All rights reserved including intellectual property and images </li>
+			    	</ul>
+			    </div>
+		</div>
+{% endblock %}
+		{% block footer %}
+		<ul class="socialmedia">
+			<li id="imdb"> <a href="http://www.imdb.com/name/nm0759154/" target="_blank"><img src="/static_files/img/imdb.png"></img></a></li>
+			<li> <a href="http://linkd.in/1uzUZeO" target="_blank"><img src="/static_files/img/linkedin.png"></img></a></li>
+		</ul>
+		{% endblock %}
+	</div>	
+</body>
+</html>

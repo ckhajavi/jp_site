@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+{% block header %}
+<body id="memoir">
+	<div class="page">
+		<div id="bsd">
+		</div>
+			{% load staticfiles %}
+			<h1> <a href="{% url "home" %}"><img src="{% static "img/logo.png" %}"> </a> </h1>
+	        <nav> 
+	          </ul> 
+	                 <li><a href="{% url "home" %}">home</a></li>
+	                 <li><a href="{% url "about" %}">about</a></li>
+	                 <li><a href="{% url "art" %}">art</a></li>
+	                 <li><a href="contact.html">contact</a></li>
+	            </ul>
+	        </nav>
+{% endblock %}
+{% block content %}
+	        <div id="content">
+                        {% load staticfiles %}
+	        	<h2>  <img src="{% static "img/memoir.png" %}" width="300">  </h2> 
+	        	<ul id="memoirmenu">
+                            {% if descriptionCount == 0 %}
+                            <h2> Memoirs</h2>
+                            {% else %}
+                                {% for item in descriptions %}
+                                    {% if item.slug == slug %}
+                                        <li class="active"> <a href='{{ item.get_absolute_url }}'>{{item.title}}</a></li>
+                                    {% elif item.active and item.title != "about" %}
+                                        <li> <a href='{{ item.get_absolute_url }}'>{{item.title}}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                
+	        	</ul>
+		        <div class="col">
+			        <img src ="{{MEDIA_URL}}{{description.descriptionimage.image}}" width="400px"/>
+			    </div>
+			    <div class="col">
+			    	<ul id="excerpt">
+					{{description.text | linebreaks}}
+			    	</ul>
+			    </div>
+{% endblock %}
+		{% block footer %}
+                </div>
+                {% endblock %}
+	</div>
+        
+</body>
+</html>

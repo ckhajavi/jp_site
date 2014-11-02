@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>baila romm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load staticfiles %}
+	<link rel='stylesheet' href='{% static "css/styles.css" %}' charset="utf-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+<body id="art">
+	<div class="page">
+		<div id="bsd">
+		</div>
+		{% load staticfiles %}
+			<h1> <a href="{% url "home" %}"><img src="{% static "img/logo.png" %}"> </a> </h1>
+	        <nav> 
+	          </ul> 
+	                 <li><a href="{% url "home" %}">home</a></li>
+	                 <li><a href="{% url "about" %}">about</a></li>
+	                 <li class="active"><a href="{% url "art" %}">art</a></li>
+	                 <li><a href="contact.html">contact</a></li>
+	            </ul>
+	        </nav> 
+	        <div id="content">
+		        <ul id="menu">
+				{% load staticfiles %}
+		        	<li> <a href="{% url "memoir" slug %}" > <img src="{% static "img/memoir.png" %}"> </a> </li>
+		        	<li> <a href="gallery/gallery.html"> <img src="{% static "img/artgallery.png" %}"> </a></li>
+		        	<li> <a href="reel.html"> <img src="{% static "img/productiondesign.png" %}"> </a> </li>
+		        </ul>
+		    </div>
+	</div>	
+</body>
+</html>

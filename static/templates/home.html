@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>baila romm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load staticfiles %}
+	<link rel='stylesheet' href='{% static "css/styles.css" %}' charset="utf-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body id="home">
+	<div class="page">
+		<div id="bsd">
+		</div>
+			<h1> <a href="home.html"><img src="images/logo.png"> </a> </h1>
+	        <nav> 
+	          </ul> 
+	                 <li class="active"><a href="">home</a></li>
+	                 <li><a href={% url "about" %}>about</a></li>
+	                 <li><a href="art.html">art</a></li>
+	                 <li><a href="contact.html">contact</a></li>
+	            </ul>
+	        </nav> 
+	</div>	
+</body>
+</html>

@@ -1,0 +1,346 @@
+/********************------  Global -------*/
+html{
+		padding: 0;
+		margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+}
+
+#bsd{
+	background : url(../images/bsd.png) no-repeat 0 0;	
+	z-index: 10;
+	top: 0;
+	right: 0;
+	width: 30px;
+	height: 18px;
+	position: absolute;
+	margin: 20px;
+	opacity: 0.5;
+}
+
+ul {
+	margin: 0; 
+	padding: 0;
+        list-style-type: none;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+
+/********************------  welcome-------*/
+	#welcome .desktop{
+		background : url(../img/bailarommart.jpg) no-repeat 0 0;	
+		background-size: cover;
+		height: 100%;
+		min-height: 700px;
+	}
+
+	#enter{
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		width: 150px;
+		margin: 20px;
+		line-height: 1;
+		text-align: right;
+		font-size: 30px;
+
+	}
+
+	a{
+		color: gray;
+		text-decoration: none;
+	}
+
+	a:hover{
+		color: #e7b6d2;
+	}
+
+
+/********************------  home-------*/
+
+	#home{ 
+		background : url(../images/bailarommsketch.jpg) no-repeat 0 0;	
+		background-size: cover;
+		height: 100%;
+
+	}
+
+	h1{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 50px;
+		margin: 0;
+		padding: 0;
+		line-height: 0.8;
+		margin-top: 50px;
+		margin-bottom: 20px;
+	}
+
+
+
+/********************------  art-------*/
+
+#art li a:hover{
+	opacity: 0.8;
+}
+
+#art #menu li{
+	margin: 15px;
+}
+
+#content h2{
+	text-align: center;
+}
+
+
+/********************------  about-------*/
+
+#about #date{
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+#about #content ul img{
+	margin-top: 10px;
+	margin-bottom: -5px;
+}
+
+.footnote{
+	font-size: 10px;
+	margin-top: 30px;
+	border-top: 2px solid black;
+	padding-top: 3px;
+        list-style-type: none;
+}
+
+#about .footnote{
+	width: 150px;
+
+}
+
+.copyright{
+	font-size: 12px;
+	margin-top: 30px;
+	font-style: italic;
+}
+
+
+/********************------ gallery-------*/
+#gallery #content{
+	margin: 0 auto;
+/*	height: 550px;
+*/}
+
+#gallery #wrapper{
+/*	height: 600px;
+*/}
+
+#gallery li img{
+	height: 450px;
+	margin-bottom: 20px;
+}
+
+.caption{
+	text-align: center;
+}
+
+/********************------  nav -------*/
+
+nav{
+	width:414px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-weight: 100;
+}
+
+
+nav li{
+	float: left;
+	width: auto;
+	margin-left: 30px;
+	list-style: none;
+	text-align: center;
+	font-size: 25px;
+}
+
+nav li a{
+	color: white;
+	text-decoration: none;
+	background-color: black;
+	padding: 10px;
+}
+
+.active a{
+	color: black;
+	background-color: white;
+
+}
+
+/********************------  Home -------*/
+
+
+#home nav{
+	margin-bottom: 350px;
+}
+
+#home #container p{
+	font-size: 25px;
+	font-weight: 100;
+	width: 400px;
+	margin: 0 auto;
+
+}
+
+/********************------  contact -------*/
+
+#contact #content{
+	text-align: center;
+	font-size: 20px;
+}
+
+#content{
+	margin-top: 40px;
+}
+
+/********************------  memoir -------*/
+
+#memoirmenu{
+	overflow: hidden;
+	width: 488px;
+	margin: 0 auto;
+}
+
+#memoirmenu li{
+	float: left;
+	margin: 10px;
+}
+
+#memoir .active{
+	border-bottom: 1px solid black;
+}
+
+#memoir #excerpt li{
+	margin-bottom: 10px;
+}
+
+/********************------  reel -------*/
+
+
+#reel #content{
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+
+/********************------  content styling -------*/
+
+
+#content{
+	overflow: hidden;
+	margin: 0 auto;
+	width: 900px;
+	margin-top: 30px;
+	font-weight: 100;
+}
+
+.col{
+	width: 400px;
+	float: left;
+	margin: 25px;
+}
+
+#content #menu ul li{
+	margin-bottom: 20px;
+}
+
+/********************------  slides -------*/
+
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+
+/********************------  social-------*/
+
+.socialmedia{
+        list-style-type: none;
+	overflow: hidden;
+	right: 0;
+	margin-right: 16px;
+	padding-top: 30px;
+	width: 140px;
+	height: 60px;
+	bottom: 0;
+		position: fixed;
+                
+}
+
+.social li{
+	margin-top: 10px;
+}
+
+
+
+.socialmedia li{
+	float: left;
+	padding: 4px;
+	padding-bottom: 0px;
+}
+
+.socialmedia li img{
+	width: 34px;
+}
+
+.socialmedia #imdb img{
+	width: 70px;
+}
+
+.socialmedia li a{
+/*	opacity: 0.7;
+*/}
+
+
+.socialmedia li a:hover{
+	opacity: 0.8;
+}
+
